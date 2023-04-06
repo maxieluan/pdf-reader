@@ -1,25 +1,36 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
-console.log("[App.vue]", `Hello world from Electron ${process.versions.electron}!`)
+console.log(
+  "[App.vue]",
+  `Hello world from Electron ${process.versions.electron}!`
+);
 </script>
 
 <template>
-  <div>
-    <a href="https://www.electronjs.org/" target="_blank">
-      <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
-    </a>
-    <a href="https://vitejs.dev/" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Electron + Vite + Vue" />
-  <div class="flex-center">
-    Place static files into the <code>/public</code> folder
-    <img style="width:5em;" src="/node.svg" alt="Node logo">
+  <div class="flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center mb-6">
+      <a href="https://www.electronjs.org/" target="_blank" class="mr-6">
+        <img
+          src="./assets/electron.svg"
+          class="logo electron"
+          alt="Electron logo"
+        />
+      </a>
+      <a href="https://vitejs.dev/" target="_blank" class="mx-6">
+        <img src="/vite.svg" class="logo" alt="Vite logo" />
+      </a>
+      <a href="https://vuejs.org/" target="_blank" class="ml-6">
+        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      </a>
+    </div>
+    <HelloWorld msg="Electron + Vite + Vue" />
+    <div class="flex items-center justify-center mt-6">
+      Place static files into the
+      <code class="bg-gray-200 px-1 py-0.5 rounded-md mx-1">/public</code>
+      folder
+      <img style="width:5em;" src="/node.svg" alt="Node logo" class="ml-2" />
+    </div>
   </div>
 </template>
 
