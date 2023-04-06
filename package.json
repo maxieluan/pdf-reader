@@ -1,8 +1,8 @@
 {
-  "name": "electron-vue-vite",
-  "version": "2.0.0",
+  "name": "pdf-reader",
+  "version": "0.0.1",
   "main": "dist-electron/main/index.js",
-  "description": "Really simple Electron + Vue + Vite boilerplate.",
+  "description": "Openai powered pdf reader",
   "author": {
     "name": "Max Luan",
     "email": "max_luan@foxmail.com"
@@ -28,8 +28,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "autoprefixer": "^10.4.14",
     "electron": "^23.1.1",
     "electron-builder": "^23.6.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1",
     "typescript": "^5.0.2",
     "vite": "^4.1.4",
     "vite-plugin-electron": "^0.11.1",
