@@ -12,7 +12,7 @@ const count = ref(0)
   <div class="card p-4 bg-white rounded-lg shadow-md">
     <div class="flex items-center justify-center">
       <button
-        class="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300"
+        class="btn px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300"
         @click="count++"
       >
         count is: {{ count }}
