@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tab Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .tab {
+        display: inline-block;
+        padding: 8px;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        background-color: #eee;
+      }
+      .tab.active {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="tab active" id="default-tab">Default</button>
+    <button class="tab" id="internet-tab">Internet</button>
+  </body>
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    const defaultTabButton = document.querySelector('#default-tab');
+    const internetTabButton = document.querySelector('#internet-tab');
+
+    defaultTabButton.addEventListener('click', () => {
+      ipcRenderer.send('change-view', 'default');
+      defaultTabButton.classList.add('active');
+      internetTabButton.classList.remove('active');
+    });
+
+    internetTabButton.addEventListener('click', () => {
+      ipcRenderer.send('change-view', 'internet');
+      internetTabButton.classList.add('active');
+      defaultTabButton.classList.remove('active');
+    });
+
+    ipcRenderer.send('change-view', 'nothing');
+  </script>
+</html>
